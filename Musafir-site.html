@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial scale=1.0;">
+    <title>Musafir Website</title>
+    <link rel="stylesheet" type="text/css" href="/Musafir-site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <nav>
+        <img src="/images/travel_logo.png" class="logoimg">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">MUSAFIR</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#hed">Sign In</a></li>
+            <li><a href="#staffc">Support</a></li>
+            <li><a href="#contactus">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <center><img src="/images/japan.jpg" id="slice"></center>
+            <div class="text">Japan</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <center><img src="/images/dubai.jpg" id="slice"></center>
+            <div class="text">Dubai</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <center><img src="/images/thailand.jpg" id="slice"></center>
+            <div class="text">Thailand</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <center><img src="/images/switzerland.jpg" id="slice"></center>
+            <div class="text">SwitzerLand</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+    <!-- </div> -->
+    <div class="columns">
+        <div class="col1" style="float: left;">
+            <h1>Japan Tour</h1>
+            <h2>Hurry Up!!!</h2>
+            <p>Entries are limited. So rush to the tune with us.
+                Limited offer, so have a qiuck contact with us on the given mobile number.
+                Why are you taking so much stress?When musafir tours and travels are with you.
+            </p>
+            <button type="button" id="readmore"><a href="https://www.japan.travel/en/"
+                    style="text-decoration: none;">Read More</a></button>
+            <button type="button" id="readmore" onclick="popup()">Price Details</button>
+            <div id="snackbar">Price : Rs.3000</div>
+        </div>
+        <div class="col1" style="float: left;">
+            <h1>Dubai Tour</h1>
+            <h2>Hurry Up!!!</h2>
+            <p>Entries are limited. So rush to the tune with us.
+                Limited offer, so have a qiuck contact with us on the given mobile number.
+                Why are you taking so much stress?When musafir tours and travels are with you.
+            </p>
+            <button type="button" id="readmore"><a href="https://www.japan.travel/en/"
+                    style="text-decoration: none;">Read More</a></button>
+            <button type="button" id="readmore" onclick="popup()">Price Details</button>
+            <div id="snackbar">Price : Rs.3000</div>
+        </div>
+        <div class="col1" style="float: left;">
+            <h1>Thailand Tour</h1>
+            <h2>Hurry Up!!!</h2>
+            <p>Entries are limited. So rush to the tune with us.
+                Limited offer, so have a qiuck contact with us on the given mobile number.
+                Why are you taking so much stress?When musafir tours and travels are with you.
+            </p>
+            <button type="button" id="readmore"><a href="https://www.japan.travel/en/"
+                    style="text-decoration: none;">Read More</a></button>
+            <button type="button" id="readmore" onclick="popup()">Price Details</button>
+            <div id="snackbar">Price : Rs.3000</div>
+        </div>
+        <div class="col1" style="float: left;">
+            <h1>Switzerland Tour</h1>
+            <iframe id="youtubevideo" src="https://www.youtube.com/embed/RHXtwA3sMr0">
+            </iframe>
+        </div>
+    </div>
+    <div class="signin">
+        <h1 id="hed">Sign In </h1>
+        <h2>Applicants details</h2>
+
+        <form>
+            <label>Full Name : </label>
+            <input type="text" id="fname" class="ip">
+
+            <label>Mail : </label>
+            <input type="email" id="email" class="ip">
+
+            <label>Age</label>
+            <input type="number" id="age" class="ip">
+
+            <label>Homestate : </label>
+            <select name="states" id="states" class="ip">
+                <option>--Select one--</option>
+                <option value="Goa">Goa</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Punjab">Punjab</option>
+
+            </select>
+            <br><br>
+
+            <input type="submit" onclick="data()" id="submit">
+            <button id="clear" onclick="clear_para()">Clear</button>
+            <br>
+        </form>
+    </div>
+
+    <!-- Staff  -->
+    <div class="staff" id="staffc">
+        <div class="staff1" style="float:left">
+            <h2>Meet our staff </h2>
+            <h3>Ramu kaka</h3>
+            <img src="/images/img5.jpg">
+            <p>Experience:12 years</p>
+            <marquee behavior="scroll" direction="up" scrollamount="1" onmouseover="this.stop();"
+                onmouseout="this.start()">Worked on >500 trips
+                <hr>
+                Very Supportive
+                <hr>
+                Good Guide
+                <hr>
+                Medalist in tourism
+            </marquee>
+        </div>
+        <div class="staff3" style="float:left">
+            <h2>Meet our staff </h2>
+            <h3>Birju Bhau</h3>
+            <img src="/images/img5.jpg">
+            <p>Experience:12 years</p>
+            <marquee behavior="scroll" direction="up" scrollamount="1" onmouseover="this.stop();"
+                onmouseout="this.start()">Worked on >500 trips
+                <hr>
+                Very Supportive
+                <hr>
+                Good Guide
+                <hr>
+                Medalist in tourism
+            </marquee>
+
+        </div>
+        <div class="staff2" style="float:left">
+            <h2>Meet our staff </h2>
+            <h3>Pintu Chacha</h3>
+            <img src="/images/img5.jpg">
+            <p>Experience:12 years</p>
+            <marquee behavior="scroll" direction="up" scrollamount="1" onmouseover="this.stop();"
+                onmouseout="this.start()">Worked on >500 trips
+                <hr>
+                Very Supportive
+                <hr>
+                Good Guide
+                <hr>
+                Medalist in tourism
+            </marquee>
+        </div>
+    </div>
+    <img src="/images/aboutus.jpg" style="width: 90%;height: 400px;margin-top: 2%;margin-left: 5%; border-radius: 20%;">
+    <div id="contactus">
+        <h1 style="text-align: center;margin-top: 5%;">CONTACT US !!!</h1>
+        <div style=" float:left; background-image: url(/images/address.jpg);" id="Addre">
+            <h2>Address</h2>
+            <h3>For Administrative Matters </h3>
+            <p>Indian Institute of Technology Goa
+                At Goa College of Engineering Campus,
+                Farmagudi, Ponda-403401, Goa
+                0832-2490-894 </p>
+            <h3>For Academic and Students Affairs </h3>
+            <p>Indian Institute of Technology Goa
+                At Goa College of Engineering Campus,
+                Farmagudi, Ponda-403401, Goa
+                0832-2490-894 </p>
+        </div>
+        <div style=" float:left;background-image: url(/images/contactus.png);" id="Addre">
+            <h2>Join us at </h2>
+            <h3>Instagram Facebook Twitter</h3>
+            <a href="https://www.instagram.com/accounts/login/?next=/iitgoaoffical/" target="_blank"><img
+                    src="/images/instagram.jpeg"></a>
+
+            <a href="https://www.facebook.com/IITGoaOfficial/" target="_blank">
+                <img src="images/facebook.jpeg"></a>
+
+            <a href="https://twitter.com/iitgoaofficial?lang=en" target="_blank"><img src="images/twitter.jpeg"
+                    target="_blank"></a>
+        </div>
+        <div style=" float:left" id="Addre">
+            <h2>Feedback Form </h2>
+            <h3>You want to add any destination</h3>
+            <hr>
+            <input type="text" maxlength="40" size="20">
+            <h3>How much you like it?</h3>
+            <hr>
+            <input type="range" maxlength="10" size="20">
+            <h3>Do You like our site?/Any suggestions!!!</h3>
+            <hr>
+            <input type="text" maxlength="40" size="20">
+            <h3>
+                <input type="submit" size="20">
+            </h3>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        //menubar
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+        
+        //SlideShow
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        
+        //pop-up 
+        function popup() {
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+        }
+
+        // Sign In
+        function data() {
+            var name = document.getElementById("fname").value;
+            var email = document.getElementById("email").value;
+            var age = document.getElementById("age").value;
+            var state = document.getElementById("states").value;
+            alert("You have signed in successfully.Thanks for Signing.\n"
+                +"Details\n"+name+"\n"+email+"\n"+age+"\n"+state)
+        }
+        function clear_para() {
+            document.getElementById("fname").value = null;
+            document.getElementById("email").value = null;
+            document.getElementById("age").value = null;
+            document.getElementById("states").value = "--Select one--";
+        }
+
+    </script>
+</body>
+
+</html>

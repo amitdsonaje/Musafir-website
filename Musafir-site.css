@@ -1,0 +1,464 @@
+/* body{
+  background-image: url("/images/vertical.jpg");
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+/* Navigation menu */
+.logoimg {
+  height: 40px;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+nav {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  margin-top: -5%;
+}
+
+label.logo {
+  color: black;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: black;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+a.active,
+a:hover {
+  background-color: rgb(228, 174, 183);
+  transition: .5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: rebeccapurple;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/* ------------Read More button----------------------------- */
+#readmore {
+  background-color: rgb(216, 229, 233);
+  width: 80px;
+  height: 40px;
+  border-radius: 10%;
+  margin: 0 25px;
+  font-size: 15px;
+  border-width: 0px;
+}
+
+#readmore:hover {
+  background-color: pink;
+}
+
+/* Pop up */
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 35px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .logoimg {
+    height: 30px;
+    margin-left: 3%;
+  }
+
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 80%;
+    height: fit-content;
+    background: white;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+
+}
+
+/* Blocks of Tour  */
+.columns {
+  background-color: white;
+}
+
+.col1 {
+  width: 40%;
+  margin-left: 7%;
+  background-image: url(/images/col1img.jpg);
+  margin-top: 2%;
+  text-align: center;
+  display: block;
+  height: 300px;
+  margin-bottom: 2%;
+}
+
+#youtubevideo {
+  width: 90%;
+  height: 70%;
+}
+
+/* Contact Us wala Section */
+#Addre {
+  width: 30%;
+  background-color: peachpuff;
+  margin-top: 2%;
+  margin-left: 2%;
+  height: 400px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#Addre img {
+  width: 25px;
+}
+
+/* SlideShow */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+#slice {
+  width: 50%;
+  height: 400px;
+  margin-top: 3%;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: darkblue;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: skyblue;
+}
+
+
+.text {
+  color: white;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  margin-top: 5%;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* ----------------------------Sign In section---------------------- */
+.signin {
+  text-align: center;
+  background-image: url(/images/signin4.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-size: larger;
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.signin label {
+  color: black;
+  font-weight: bold;
+}
+
+/*------------------------------------ Staff------------------------------- */
+.staff1 {
+  width: 25%;
+  height: fit-content;
+  background-color: white;
+  position: relative;
+  animation-name: example1;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  text-align: center;
+}
+
+@keyframes example1 {
+  from {
+    left: 0px;
+    top: 10px;
+  }
+
+  to {
+    left: 8%;
+    top: 10px;
+    background-color: lightyellow;
+  }
+}
+
+.staff2 {
+  width: 25%;
+  height: fit-content;
+  background-color: white;
+  position: relative;
+  animation-name: example2;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  text-align: center;
+}
+
+@keyframes example2 {
+  from {
+    background-color: white;
+    left: 0px;
+    top: 10px;
+  }
+
+  to {
+    background-color: lightblue;
+    left: 16%;
+    top: 10px;
+  }
+}
+
+.staff3 {
+  width: 25%;
+  height: fit-content;
+  background-color: white;
+  position: relative;
+  animation-name: example3;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  text-align: center;
+}
+
+@keyframes example3 {
+  from {
+    left: 0px;
+    top: 10px;
+  }
+
+  to {
+    left: 12%;
+    top: 10px;
+    background-color: lightcyan;
+  }
+}
+
+.staff img {
+  width: 50%;
+}
+
+@media only screen and (max-width:400px) {
+  .logoimg {
+    display: none;
+  }
+
+  label.logo {
+    font-size: 23px;
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width:630px) {
+  .col1 {
+    width: 100%;
+    margin-left: 0px;
+    background-color: blanchedalmond;
+    margin-top: 2%;
+    text-align: center;
+    display: block;
+    height: fit-content;
+  }
+
+  #youtubevideo {
+    width: 90%;
+  }
+
+  #Addre {
+    width: 90%;
+    margin-left: 5%;
+    text-align: center;
+    height: fit-content;
+  }
+
+  #Addre a {
+    margin: 0 10px;
+  }
+
+  .signin {
+    text-align: center;
+    font-size: larger;
+    width: 90%;
+  }
+
+  .signin form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ip {
+    width: 60%;
+    margin-left: 20%;
+
+  }
+
+  #submit {
+    width: 20%;
+    margin-left: 20%;
+  }
+
+  #clear {
+    width: 20%;
+    margin-left: 60%;
+    margin-top: -22px;
+  }
+
+  .staff h2 {
+    font-size: 20px;
+  }
+
+  .staff h3,
+  p,
+  marquee {
+    font-size: 10px;
+  }
+}
